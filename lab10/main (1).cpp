@@ -20,7 +20,7 @@ int main()
     {
         cout << "\n====================================\n";
         cout << "1 - Param72 (Перевірка часу)\n";
-        cout << "2 - Begin13 (Площі кіл)\n";
+        cout << "2 - Begin13 (Площа кіл)\n";
         cout << "3 - Boolean40 (Хід коня)\n";
         cout << "0 - Вихід\n";
         cout << "Ваш вибір: ";
@@ -55,27 +55,22 @@ int main()
 }
 
 // ================= Param72 =================
-
 void task1()
 {
     const int N = 5;
-
     TTime times[N];
 
-    // Введення 5 моментів часу
     for (int i = 0; i < N; i++)
     {
         cout << "\nМомент часу " << i + 1 << endl;
-
         input_time(times[i]);
     }
 }
 
 // ================= Begin13 =================
-
 void task2()
 {
-    Ring r;
+    Ring r; 
 
     cout << "\nВведіть зовнішній радіус R1: ";
     cin >> r.R1;
@@ -90,27 +85,20 @@ void task2()
         return;
     }
 
-    // Обчислення площ
+    // ВИКЛИК ФУНКЦІЇ
     calculateRingAreas(&r);
 
     cout << fixed << setprecision(2);
 
-    // Виведення результатів
-    cout << "\nПлоща першого кола S1 = "
-         << r.S1 << endl;
-
-    cout << "Площа другого кола S2 = "
-         << r.S2 << endl;
-
-    cout << "Площа кільця S3 = "
-         << r.S3 << endl;
+    cout << "\nПлоща першого кола S1 = " << r.S1 << endl;
+    cout << "Площа другого кола S2 = " << r.S2 << endl;
+    cout << "Площа кільця S3 = " << r.S3 << endl;
 }
 
 // ================= Boolean40 =================
-
 void task3()
 {
-    KnightMove km;
+    KnightMove km; 
 
     cout << "\nВведіть x1 y1: ";
     cin >> km.x1 >> km.y1;
@@ -128,11 +116,10 @@ void task3()
         return;
     }
 
-    // Перевірка ходу коня
+    // ВИКЛИК ФУНКЦІЇ 
     checkKnightMove(&km);
 
     cout << "\nРезультат: ";
-
     if (km.canMove)
         cout << "TRUE - кінь може перейти.\n";
     else

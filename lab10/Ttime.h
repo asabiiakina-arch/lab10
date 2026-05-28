@@ -1,27 +1,18 @@
-#ifndef TTIME_H
-#define TTIME_H
+#ifndef TTIME
+#define TTIME
 
 #include <iostream>
 #include <limits>
 #include <iomanip>
-
 using namespace std;
 
-// Структура часу
-struct TTime
-{
-    int Hour;
-    int Min;
-    int Sec;
+// Опис типу TTime
+struct TTime {
+    int Hour, Min, Sec;
 };
 
-// Перевірка правильності часу
 int CheckTime(TTime T);
-
-// Введення часу
-void input_time(TTime& t);
-
-// Виведення часу
-void output_time(const TTime& t);
+void input_time(TTime &t);
+void output_time(const TTime &t);
 
 #endif
